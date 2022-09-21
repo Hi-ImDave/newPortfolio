@@ -453,6 +453,10 @@ nav a {
   textarea {
     height: 5em;
   }
+
+  nav {
+    bottom: 15em;
+  }
 }
 
 /* LAPTOP END */
