@@ -343,13 +343,7 @@ textarea {
   text-align: center;
 }
 
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+
 
 .dot {
   cursor: pointer;
@@ -556,9 +550,7 @@ textarea {
 }
 
 .panel {
-    background-size: cover 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.744);
     height: 80vh;
     border-radius: 50px;
     color: #ffff;
@@ -567,6 +559,17 @@ textarea {
     margin: 10px;
     position: relative;
     transition: flex 0.7s ease-in;
+}
+
+.inner-panel {
+  margin: 5%;
+  height: 70%;
+  border: 1px solid #eee;
+  border-radius: 50px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .panel h3 {
