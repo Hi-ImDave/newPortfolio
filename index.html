@@ -26,108 +26,158 @@
           </button>
         </div>
       </div>
-      <header id="header">
-        <div class="header-container">
-          <h1 id="left">David Mott</h1>
-
-          <i class="fa-brands fa-html5 header-icons"></i>
-          <i class="fa-brands fa-css3-alt header-icons"></i>
-          <i class="fa-brands fa-square-js header-icons"></i>
-          <i class="fa-brands fa-react header-icons"></i>
-          <i class="fa-brands fa-node header-icons"></i>
-
-          <h1 id="right">Full Stack Web Developer</h1>
+      <header id="header-container">
+        <div class="header">
+          <h1 id="left">David Mott - Full Stack Web Developer</h1>
         </div>
       </header>
-      <section class="content-container">
-        <div class="about-container">
-          <div class="about-panel">
-            <h2>About Me</h2>
-            <p>
-              I'm a community taught software engineer with a deep interest in
-              User Interface Design skilled in solving problems with HTML, CSS,
-              JavaScript, React, Node, MongoDB, and Express.
-            </p>
-          </div>
-          <div class="contact-panel">
-            <h2>Contact Me</h2>
-            <p>
-              I am currently accepting new freelance clients and looking for
-              full time work
-            </p>
-          </div>
-          <div class="form-container">
-            <!-- STANDARD FORM START -->
-            <form>
-              <div class="form-control">
-                <input type="text" required />
-                <label>Name</label>
-              </div>
-              <div class="form-control">
-                <input type="email" required />
-                <label>Email</label>
-              </div>
-              <div class="form-control">
-                <textarea name="email-body" id="email-body"></textarea>
-              </div>
-              <button class="btn">Submit</button>
-            </form>
-            <!-- STANDARD FORM END -->
-            <!-- MODAL FORM START -->
-            <div id="myModal" class="modal">
-              <!-- Modal content -->
-              <div class="modal-content">
-                <span class="close">&times;</span>
 
+      <section class="content-container">
+        <!-- REDO entire about container. about, contact, and form containers separate. easier to move everything around for responsiveness -->
+        <div class="side-container">
+          <div class="info-container">
+            <div class="about-container">
+              <h2>About Me</h2>
+              <p>
+                I'm a community taught software engineer with a deep interest in
+                User Interface Design skilled in solving problems with HTML,
+                CSS, JavaScript, React, Node, MongoDB, and Express.
+              </p>
+            </div>
+            <div class="contact-container">
+              <h2>Contact</h2>
+              <p>
+                I am currently accepting new freelance clients and looking for
+                full time work
+              </p>
+            </div>
+            <div class="form-container">
+              <!-- STANDARD FORM START -->
+              <form>
                 <div class="form-control">
                   <input type="text" required />
                   <label>Name</label>
                 </div>
                 <div class="form-control">
                   <input type="email" required />
-                  <label>Email</label>
+                  <label id="email">Email</label>
                 </div>
                 <div class="form-control">
                   <textarea name="email-body" id="email-body"></textarea>
                 </div>
                 <button class="btn">Submit</button>
-              </div>
+              </form>
             </div>
-            <!-- MODAL FORM END -->
-            <button id="open-btn" class="btn">Open Form</button>
+            <!-- STANDARD FORM END -->
           </div>
         </div>
+        <!-- MODAL FORM START -->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <div class="form-control">
+              <input type="text" required />
+              <label>Name</label>
+            </div>
+            <div class="form-control">
+              <input type="email" required />
+              <label>Email</label>
+            </div>
+            <div class="form-control">
+              <textarea name="email-body" id="email-body"></textarea>
+            </div>
+            <button class="btn">Submit</button>
+          </div>
+        </div>
+
+        <!-- MODAL FORM END -->
+        <div id="slideshow-dot" style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
         <section class="projects-container">
-          <div
-            class="panel active"
-            style="background-image: url('assets/images/shootingStar.jpg')"
-          >
-            <h3>Shooting Star</h3>
-          </div>
-          <div
-            class="panel"
-            style="background-image: url('assets/images/icyMountain.jpg')"
-          >
-            <h3>Icy Mountains</h3>
-          </div>
-          <div
-            class="panel"
-            style="background-image: url('assets/images/plateaus.jpg')"
-          >
-            <h3>Plateaus</h3>
-          </div>
-          <div
-            class="panel"
-            style="background-image: url('assets/images/throughTheTrees.jpg')"
-          >
-            <h3>Through the Trees</h3>
-          </div>
-          <div
-            class="panel"
-            style="background-image: url('assets/images/lighthouse.jpg')"
-          >
-            <h3>Lighthouse</h3>
-          </div>
+          <section class="slides-container">
+            <div class="slides fade">
+              <div class="numbertext">1/5</div>
+              <img
+                class="slide-img"
+                src="assets/images/shootingStar.jpg"
+                alt=""
+              />
+              <div class="text">Shooting Star</div>
+            </div>
+            <div class="slides fade">
+              <div class="numbertext">2/5</div>
+              <img
+                class="slide-img"
+                src="assets/images/icyMountain.jpg"
+                alt=""
+              />
+              <div class="text">Icy Mountains</div>
+            </div>
+            <div class="slides fade">
+              <div class="numbertext">3/5</div>
+              <img class="slide-img" src="assets/images/plateaus.jpg" alt="" />
+              <div class="text">Plateaus</div>
+            </div>
+            <div class="slides fade">
+              <div class="numbertext">4/5</div>
+              <img
+                class="slide-img"
+                src="assets/images/throughTheTrees.jpg"
+                alt=""
+              />
+              <div class="text">Through the Trees</div>
+            </div>
+            <div class="slides fade">
+              <div class="numbertext">5/5</div>
+              <img
+                class="slide-img"
+                src="assets/images/lighthouse.jpg"
+                alt=""
+              />
+              <div class="text">Lighthouse</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </section>
+          <section class="panel-container">
+            <div
+              class="panel active"
+              style="background-image: url('assets/images/shootingStar.jpg')"
+            >
+              <h3>Shooting Star</h3>
+            </div>
+            <div
+              class="panel"
+              style="background-image: url('assets/images/icyMountain.jpg')"
+            >
+              <h3>Icy Mountains</h3>
+            </div>
+            <div
+              class="panel"
+              style="background-image: url('assets/images/plateaus.jpg')"
+            >
+              <h3>Plateaus</h3>
+            </div>
+            <div
+              class="panel"
+              style="background-image: url('assets/images/throughTheTrees.jpg')"
+            >
+              <h3>Through the Trees</h3>
+            </div>
+            <div
+              class="panel"
+              style="background-image: url('assets/images/lighthouse.jpg')"
+            >
+              <h3>Lighthouse</h3>
+            </div>
+          </section>
         </section>
       </section>
     </section>
@@ -144,6 +194,11 @@
         <li>
           <a href="https://www.linkedin.com/in/hi-imdave/" target="_blank">
             <i class="fa-brands fa-linkedin"></i>LinkedIn
+          </a>
+        </li>
+        <li>
+          <a id="open-btn" href="#" target="">
+            <i class="fas fa-envelope"></i>Contact
           </a>
         </li>
       </ul>
